@@ -17,7 +17,7 @@ class Login extends CI_Controller {
 		}
 
 		$this->load->view('partial/header');
-		$this->load->view('partial/navbar');
+		$this->load->view('partial/navbar-login');
 		$this->load->view('partial/sidebar');
 		$this->load->view('v_login');
 		$this->load->view('partial/footer');

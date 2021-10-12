@@ -35,6 +35,17 @@ class Utama extends CI_Controller {
 		$this->load->view('partial/footer');
 	}
 
+	public function cari()
+	{
+		$key = $this->input->get('key');
+		$data['tampil'] = $this->m_admin->cari($key);
+		$this->load->view('partial/header');
+		$this->load->view('partial/navbar');
+		$this->load->view('partial/sidebar');
+		$this->load->view('v_utama', $data);
+		$this->load->view('partial/footer');
+	}
+
 }
 
 /* End of file Utama.php */

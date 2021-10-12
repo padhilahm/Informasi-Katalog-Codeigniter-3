@@ -15,21 +15,9 @@ class Admin extends CI_Controller {
 
 	public function index()
 	{
-		// $tampil = $this->m_admin->tampil();
-		// foreach ($tampil as $t) {
-		// 	$data2['data'] = array(
-		// 		'id_post' => $t->id_post, 
-		// 		'judul_post' => $t->judul_post,
-		// 		'isi_post' => $t->isi_post,
-		// 		'gambar_post' => $t->gambar_post
-		// 	);
-		// }
 
 		$data2['data'] = $this->m_admin->tampil();
 
-		// $data2['data'] = $data;
-
-		// var_dump($data);
 		$this->load->view('partial/header-admin');
 		$this->load->view('partial/navbar-admin');
 		$this->load->view('partial/sidebar');
@@ -42,10 +30,7 @@ class Admin extends CI_Controller {
 		if (isset($_POST['tambah'])) {
 			$judul = $this->input->post('judul');
 			$isi = $this->input->post('deskripsi');
-			// $gambar = $this->input->post('gambar');
 
-			
-			// $this->load->library('upload');
 			$config['upload_path'] = './assets/img/upload/';
 			$config['allowed_types'] = 'gif|jpg|png|jpeg|bmp';
 			$config['file_name'] = date('Y-m-d-H-i-s')."_".uniqid();
@@ -93,9 +78,7 @@ class Admin extends CI_Controller {
 			$judul = $this->input->post('judul');
 			$isi = $this->input->post('deskripsi');
 			$gambar_post_h = $this->input->post('gambar_post_h');
-			// $gambar = $this->input->post('gambar');
 
-			// $this->load->library('upload');
 			$config['upload_path'] = './assets/img/upload/';
 			$config['allowed_types'] = 'gif|jpg|png|jpeg|bmp';
 			$config['file_name'] = date('Y-m-d-H-i-s')."_".uniqid();

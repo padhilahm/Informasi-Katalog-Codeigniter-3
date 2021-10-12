@@ -1,12 +1,19 @@
+
 <div class="main-panel">
 	<div class="content">
+
 		<div class="panel-header bg-primary-gradient">
+
 			<div class="page-inner py-5">
 				<div class="d-flex align-items-left align-items-md-center flex-column flex-md-row">
+
 					<div>
+
+
 						<h2 class="text-white pb-2 fw-bold">Halaman Utama</h2>
 						<h5 class="text-white op-7 mb-2">Informasi Katalog</h5>
 					</div>
+					<img src="<?= base_url() ?>assets/img/bg.png" alt="">
 					
 				</div>
 			</div>

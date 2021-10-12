@@ -24,6 +24,14 @@ class M_admin extends CI_Model {
 		return $query->result();
 	}
 
+	function cari($key)
+	{
+		$this->db->like('judul_post', $key);
+		$this->db->order_by('id_post', 'desc');
+		$query = $this->db->get('tbl_post');
+		return $query->result();
+	}
+
 	function edit($data, $id_post)
 	{
 		// $this->db->where('id_post', $id_post);

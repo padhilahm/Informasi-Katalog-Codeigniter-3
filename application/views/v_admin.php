@@ -138,11 +138,9 @@
 													<button type="button" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task" data-toggle="modal" data-target="#editRowModal<?= $d->id_post; ?>">
 														<i class="fa fa-edit"></i>
 													</button>
-													<a href="<?= base_url(); ?>admin/hapus/<?= $d->id_post; ?>/<?= $d->gambar_post ?>"><button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Remove">
+													<a onclick="confirmation(event)" href="<?= base_url(); ?>admin/hapus/<?= $d->id_post; ?>/<?= $d->gambar_post ?>"><button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Remove">
 														<i class="fa fa-times"></i>
 													</button></a>
-
-													<button type="button" class="btn btn-success" id="alert_demo_7">Show me</button>
 													
 												</div>
 											</td>

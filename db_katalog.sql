@@ -1,6 +1,6 @@
 /*
 SQLyog Ultimate v12.5.1 (64 bit)
-MySQL - 10.4.20-MariaDB : Database - db_properti
+MySQL - 10.4.20-MariaDB : Database - db_katalog
 *********************************************************************
 */
 
@@ -44,13 +44,12 @@ CREATE TABLE `tbl_kunjungan` (
   PRIMARY KEY (`id_kunjungan`),
   KEY `fk_tbl_kunjungan_tbl_post` (`id_post`),
   CONSTRAINT `fk_tbl_kunjungan_tbl_post` FOREIGN KEY (`id_post`) REFERENCES `tbl_post` (`id_post`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=45 DEFAULT CHARSET=utf8mb4;
 
 /*Data for the table `tbl_kunjungan` */
 
 insert  into `tbl_kunjungan`(`id_kunjungan`,`tanggal_kunjungan`,`ip_address`,`id_post`) values 
-(6,'2021-09-23 23:46:52','::1',9),
-(12,'2021-09-23 23:48:50','::1',9);
+(43,'2021-10-12 19:29:30','::1',19);
 
 /*Table structure for table `tbl_post` */
 
@@ -62,13 +61,13 @@ CREATE TABLE `tbl_post` (
   `isi_post` text DEFAULT NULL,
   `gambar_post` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id_post`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4;
 
 /*Data for the table `tbl_post` */
 
 insert  into `tbl_post`(`id_post`,`judul_post`,`isi_post`,`gambar_post`) values 
-(9,'Citra  Mitra City','Berikut merupakan informasi terkait perumahan Citra Mitra City yang berlokasi di Banjarbaru','2021-09-23-17-13-28_614c99983f5af.jpg'),
-(11,'Cluster Alamanda','Berikut adalah informasi perumahan daerah Banjarmasin tepatnya di Komplek Green Yakin Cluster Alamanda','2021-09-23-17-48-38_614ca1d65f6f1.jpg');
+(19,'Rumah 1','Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa temporibus reiciendis, possimus consectetur, numquam mollitia rem voluptatum explicabo. Consectetur aspernatur, aut ipsa architecto atque repellendus, quas ad ipsum illo rerum repellat saepe obcaecati, dolorem aperiam vitae. Perspiciatis ea aliquam ipsum incidunt nostrum rerum harum, exercitationem molestiae pariatur sint tenetur alias laboriosam maxime, atque et fugit accusamus voluptates nobis placeat quidem omnis officia delectus dicta corrupti? Eius dignissimos reprehenderit, nam sapiente reiciendis harum est consequuntur ipsum nostrum dolorum sequi delectus error ducimus dolorem nobis consectetur quos. Blanditiis reiciendis, consectetur repellendus placeat neque, delectus velit deleniti ab beatae nostrum illo, debitis minus!','2021-10-12-13-27-36_6165712834d53.jpg'),
+(20,'Rumah 2','Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa temporibus reiciendis, possimus consectetur, numquam mollitia rem voluptatum explicabo. Consectetur aspernatur, aut ipsa architecto atque repellendus, quas ad ipsum illo rerum repellat saepe obcaecati, dolorem aperiam vitae. Perspiciatis ea aliquam ipsum incidunt nostrum rerum harum, exercitationem molestiae pariatur sint tenetur alias laboriosam maxime, atque et fugit accusamus voluptates nobis placeat quidem omnis officia delectus dicta corrupti? Eius dignissimos reprehenderit, nam sapiente reiciendis harum est consequuntur ipsum nostrum dolorum sequi delectus error ducimus dolorem nobis consectetur quos. Blanditiis reiciendis, consectetur repellendus placeat neque, delectus velit deleniti ab beatae nostrum illo, debitis minus!','2021-10-12-13-27-58_6165713e6eb5d.jpg');
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;

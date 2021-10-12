@@ -255,7 +255,7 @@
 			var initDemos = function() {
 				//== Sweetalert Demo 1
 
-				$('#alert_demo_7').click(function(e) {
+				$('.alert_notif').on('click',function(e) {
 					swal({
 						title: 'Are you sure?',
 						text: "You won't be able to revert this!",
@@ -272,6 +272,7 @@
 						}
 					}).then((Delete) => {
 						if (Delete) {
+							var getLink = $(this).attr('href');
 							swal({
 								title: 'Deleted!',
 								text: 'Your file has been deleted.',
@@ -282,6 +283,7 @@
 									}
 								}
 							});
+							// console.log(getLink);
 						} else {
 							swal.close();
 						}
@@ -302,5 +304,48 @@
 			SweetAlert2Demo.init();
 		});
 	</script>
+
+	<script>
+		function confirmation(ev) {
+			ev.preventDefault();
+			var urlToRedirect = ev.currentTarget.getAttribute('href');
+			console.log(urlToRedirect);
+			swal({
+				title: 'Are you sure?',
+				text: "You won't be able to revert this!",
+				type: 'warning',
+				buttons:{
+					confirm: {
+						text : 'Yes, delete it!',
+						className : 'btn btn-success'
+					},
+					cancel: {
+						visible: true,
+						className: 'btn btn-danger'
+					}
+				}
+			})
+			.then((willDelete) => {
+				if (willDelete) {
+					swal({
+						title: 'Deleted!',
+						text: 'Your file has been deleted.',
+						type: 'success',
+						buttons : {
+							confirm: {
+								className : 'btn btn-success'
+							}
+						}
+					});
+					window.location.href = urlToRedirect;
+				} else {
+					swal.close();
+				}
+			});
+		}
+	</script>
+
+
+
 </body>
 </html>
